@@ -76,10 +76,21 @@ These insights empower stakeholders with key business metrics, enabling strategi
 ```
 data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+├── Data visualisation/                 # visualize key business metrics and trends
+│   ├── Power BI Report.png             
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)    
+│                     
+│   ├── source_crm/
+│       ├──cust_info.csv
+│       ├── prd_info.csv
+│       ├──sales_details.csv
+│   ├── source_erp/
+│       ├── CUST_AZ12.csv
+│       ├── LOC_A101.csv
+│       ├── PX_CAT_G1V2.csv                        
 │
 ├── docs/                               # Project documentation and architecture details
-│   ├── etl.png                        # file shows all different techniquies and methods of ETL
+│   ├── etl.png                         # file shows all different techniquies and methods of ETL
 │   ├── data_architecture.png           # file shows the project's architecture
 │   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
 │   ├── data_flow.png                   # file for the data flow diagram
@@ -87,19 +98,40 @@ data-warehouse-project/
 |   ├── data_integration                # how tables are related
 │   ├── naming_conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
+├── exploratory_data_analysis/
+│   ├──00_init_database.sql
+│   ├──01_database_exploration.sql
+│   ├──02_dimensions_exploration.sql
+│   ├──03_date_range_exploration.sql
+│   ├──04_measures_exploration.sql
+│   ├──05_magnitude_analysis.sql
+│   ├──06_ranking_analysis.sql
+│   ├──07_change_over_time_analysis.sql
+│   ├──08_cumulative_analysis.sql
+│   ├──09_performance_analysis.sql
+│   ├──10_data_segmentation.sql
+│   ├──11_part_to_whole_analysis.sql
+│   ├──12_report_customers.sql
+│   ├──13_report_products.sql
+│  
 ├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
+│         ├── bronze/                         # Scripts for extracting and loading raw data
+│                  ├── ddl_bronze.sql
+│                  ├── proc_load_bronze.sql
 │
+│         ├── silver/                         # Scripts for cleaning and transforming data
+│                   ├── ddl_silver.sql
+│                   ├── proc_load_silver.sql   
+│         ├── gold/                           # Scripts for creating analytical models
+│                   ├──ddl_gold.sql
 ├── tests/                              # Test scripts and quality files
-│
+│       ├── quality_checks_gold.sql
+│       ├── quality_checks_silver.sql
+├── init_database.sql
 ├── README.md                           # Project overview and instructions
 ├── LICENSE                             # License information for the repository
 ```
 ---
-
-
 ---
 
 ## 🛡️ License
