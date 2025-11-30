@@ -77,7 +77,8 @@ These insights empower stakeholders with key business metrics, enabling strategi
 data-warehouse-project/
 │
 ├── Data visualisation/                 # visualize key business metrics and trends
-│   ├── Power BI Report.png             
+│   ├── Power BI Report.png
+│   ├── Power BI Report Insights.md     
 ├── datasets/                           # Raw datasets used for the project (ERP and CRM data)    
 │                     
 │   ├── source_crm/
