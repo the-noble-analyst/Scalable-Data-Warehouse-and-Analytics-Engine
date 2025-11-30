@@ -124,10 +124,11 @@ data-warehouse-project/
 │                   ├── proc_load_silver.sql   
 │         ├── gold/                           # Scripts for creating analytical models
 │                   ├──ddl_gold.sql
+│          ── init_database.sql
 ├── tests/                              # Test scripts and quality files
 │       ├── quality_checks_gold.sql
 │       ├── quality_checks_silver.sql
-├── init_database.sql
+│
 ├── README.md                           # Project overview and instructions
 ├── LICENSE                             # License information for the repository
 ```
