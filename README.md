@@ -1,4 +1,29 @@
 
+
+Understood — below is a complete, **cleanly formatted, professional `README.md`** you can copy-paste into your GitHub repository. I preserved your important content (Medallion architecture, file structure, KPIs, Power BI, datasets) and added clear sections for recruiters, maintainers, and future co
+
+pasted
+
+make it more human written friendly not robotic and correct the format -
+
+Taking longer than usual. Trying again shortly (attempt 8 of 10)
+
+
+How can I help you today?
+
+
+
+
+
+
+8.55 KB •248 lines
+•
+Formatting may be inconsistent from source
+Understood — below is a complete, **cleanly formatted, professional `README.md`** you can copy-paste into your GitHub repository.
+I preserved your important content (Medallion architecture, file structure, KPIs, Power BI, datasets) and added clear sections for recruiters, maintainers, and future contributors. It’s written in a human, professional tone and ready for use.
+
+---
+
 ```markdown
 # 📊 Data Warehouse & Analytics — TwoWheels Sales Intelligence
 
