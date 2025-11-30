@@ -1,268 +1,140 @@
+# Data Warehouse and Analytics Project
 
-
-Understood — below is a complete, **cleanly formatted, professional `README.md`** you can copy-paste into your GitHub repository. I preserved your important content (Medallion architecture, file structure, KPIs, Power BI, datasets) and added clear sections for recruiters, maintainers, and future co
-
-pasted
-
-make it more human written friendly not robotic and correct the format -
-
-Taking longer than usual. Trying again shortly (attempt 8 of 10)
-
-
-How can I help you today?
-
-
-
-
-
-
-8.55 KB •248 lines
-•
-Formatting may be inconsistent from source
-Understood — below is a complete, **cleanly formatted, professional `README.md`** you can copy-paste into your GitHub repository.
-I preserved your important content (Medallion architecture, file structure, KPIs, Power BI, datasets) and added clear sections for recruiters, maintainers, and future contributors. It’s written in a human, professional tone and ready for use.
+Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
+This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
 
 ---
+## 🏗️ Data Architecture
 
-```markdown
-# 📊 Data Warehouse & Analytics — TwoWheels Sales Intelligence
-
-**A production-minded Data Warehouse + Analytics project** that converts raw ERP & CRM sales data into business-ready insights and an executive Power BI dashboard.  
-This repo demonstrates data engineering (Medallion architecture), robust ETL, analytics-ready modeling (star schema), SQL-driven exploration, and decision-focused reporting.
-
----
-
-## 🚀 Project Purpose & Motivation
-
-Modern businesses have data — but not every team turns that data into action.  
-This project exists to show how to:
-
-- Ingest and organize raw transactional data (ERP, CRM) reliably
-- Clean, standardize and model data for analytics use cases
-- Produce SQL-powered analytics for product, customer and sales intelligence
-- Surface business decisions through a polished Power BI dashboard
-
-Primary business question answered:
-
-> **“How can TwoWheels increase revenue and scale sustainably by knowing who buys, what sells, and where to expand?”**
-
----
-
-## 🔑 Key Metrics (Executive Snapshot)
-
-These are the headline KPIs surfaced in analysis & Power BI:
-
-- **Total Sales:** 29M  
-- **Total Customers:** 18K  
-- **Total Orders:** 28K  
-- **Average Order Value (AOV):** 1.06K  
-- **Year-over-Year (YoY) Growth:** 1.12%
-
----
-
-## 🏗 Architecture Overview — Medallion Pattern
-
-The solution follows a Medallion approach:
-
-- **Bronze (Raw):** Raw CSV ingestion into SQL Server (unchanged).  
-- **Silver (Cleaned):** Data cleansing, standardization, normalization.  
-- **Gold (Business-ready):** Star-schema fact & dimension models for analytics and reporting.
-
+The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
 ![Data Architecture](docs/data_architecture.png)
 
+1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+
+---
+## 📖 Project Overview
+
+This project involves:
+
+1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
+3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
+4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+5. **Data Visualisation**: Develop an interactive Power BI dashboard to visualize key business metrics and trends, enabling stakeholders to explore data insights through intuitive visual analytics.
+
+
+🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+- SQL Development
+- Data Architect
+- Data Engineering  
+- ETL Pipeline Developer  
+- Data Modeling  
+- Data Analytics
+- Data Visualisation
+
 ---
 
-## 🧩 Repository Structure
+## 🛠️ Important Links & Tools:
 
+Everything is for Free!
+- **[Datasets](datasets/):** Access to the project dataset (csv files).
+- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Lightweight server for hosting your SQL database.
+- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with databases.
+- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
+- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
+---
+
+## 🚀 Project Requirements
+
+### Building the Data Warehouse (Data Engineering)
+
+#### Objective
+Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+
+#### Specifications
+- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
+- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
+- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
+- **Scope**: Focus on the latest dataset only; historization of data is not required.
+- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+
+---
+
+### BI: Analytics & Reporting (Data Analysis)
+
+#### Objective
+Develop SQL-based analytics to deliver detailed insights into:
+- **Customer Behavior**
+- **Product Performance**
+- **Sales Trends**
+
+These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
+
+## 📂 Repository Structure
 ```
-
 data-warehouse-project/
 │
-├── Data visualisation/                # Power BI report & exported visuals
-│   ├── Power BI Report.png
-│
-├── datasets/                          # Source ERP + CRM CSVs
+├── Data visualisation/                 # visualize key business metrics and trends
+│   ├── Power BI Report.png             
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)    
+│                     
 │   ├── source_crm/
-│   │   ├── cust_info.csv
-│   │   ├── prd_info.csv
-│   │   └── sales_details.csv
+│       ├──cust_info.csv
+│       ├── prd_info.csv
+│       ├──sales_details.csv
 │   ├── source_erp/
 │       ├── CUST_AZ12.csv
 │       ├── LOC_A101.csv
-│       └── PX_CAT_G1V2.csv
+│       ├── PX_CAT_G1V2.csv                        
 │
-├── docs/                              # Architecture diagrams & data catalog
-│   ├── data_architecture.png
-│   ├── data_model.png
-│   ├── data_catalog.md
-│   ├── etl.png
-│   └── naming_conventions.md
+├── docs/                               # Project documentation and architecture details
+│   ├── etl.png                         # file shows all different techniquies and methods of ETL
+│   ├── data_architecture.png           # file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.png                   # file for the data flow diagram
+│   ├── data_model.png                  # file for data models (star schema)
+|   ├── data_integration                # how tables are related
+│   ├── naming_conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
-├── exploratory_data_analysis/         # SQL-based EDA and analysis scripts
-│   ├── 00_init_database.sql
-│   ├── 01_database_exploration.sql
-│   ├── ...
-│   └── 13_report_products.sql
+├── exploratory_data_analysis/
+│   ├──00_init_database.sql
+│   ├──01_database_exploration.sql
+│   ├──02_dimensions_exploration.sql
+│   ├──03_date_range_exploration.sql
+│   ├──04_measures_exploration.sql
+│   ├──05_magnitude_analysis.sql
+│   ├──06_ranking_analysis.sql
+│   ├──07_change_over_time_analysis.sql
+│   ├──08_cumulative_analysis.sql
+│   ├──09_performance_analysis.sql
+│   ├──10_data_segmentation.sql
+│   ├──11_part_to_whole_analysis.sql
+│   ├──12_report_customers.sql
+│   ├──13_report_products.sql
+│  
+├── scripts/                            # SQL scripts for ETL and transformations
+│         ├── bronze/                         # Scripts for extracting and loading raw data
+│                  ├── ddl_bronze.sql
+│                  ├── proc_load_bronze.sql
 │
-├── scripts/                           # ETL + transformation DDL & procedures
-│   ├── bronze/
-│   │   ├── ddl_bronze.sql
-│   │   └── proc_load_bronze.sql
-│   ├── silver/
-│   │   ├── ddl_silver.sql
-│   │   └── proc_load_silver.sql
-│   ├── gold/
-│   │   └── ddl_gold.sql
-│   └── init_database.sql
+│         ├── silver/                         # Scripts for cleaning and transforming data
+│                   ├── ddl_silver.sql
+│                   ├── proc_load_silver.sql   
+│         ├── gold/                           # Scripts for creating analytical models
+│                   ├──ddl_gold.sql
+│          ── init_database.sql
+├── tests/                              # Test scripts and quality files
+│       ├── quality_checks_gold.sql
+│       ├── quality_checks_silver.sql
 │
-├── tests/                             # Data quality & validation checks
-│   ├── quality_checks_silver.sql
-│   └── quality_checks_gold.sql
-│
-├── README.md                          # THIS FILE
-└── LICENSE
-
-````
-
----
-
-## 🛠 Tech Stack
-
-- **Database:** SQL Server (Express compatible)
-- **Languages:** T-SQL (ETL & analytics)
-- **BI:** Power BI (reporting & dashboards)
-- **Design & Docs:** DrawIO, Markdown
-- **Testing:** SQL-based quality checks
-
----
-
-## 🔍 Analytics & Business Insights (Summary)
-
-The Power BI dashboard was built to surface actionable business insights, not just charts. Key findings include:
-
-1. **Revenue Concentration:** United States contributes almost 2× revenue vs other regions — a strength and concentration risk.  
-   *Action:* Expand targeted marketing and distribution into Germany, France, Canada, and the UK.
-
-2. **High-value Age Group (41–60):** This cohort displays the highest purchase power and loyalty.  
-   *Action:* Offer premium touring bikes, loyalty tiers, and targeted upsells.
-
-3. **Underutilized Accessories & Clothing:** Accessories contribute little despite high bike sales — a clear upsell opportunity.  
-   *Action:* Bundle products, offer post-purchase accessory discounts, and launch seasonal clothing lines.
-
-4. **Gender Gap — Untapped Female Market:** Majority male customers; female segment is growing globally.  
-   *Action:* Launch women-specific gear and female-focused campaigns/events.
-
-5. **Year-End Dip Observed:** Sales grow overall but a recurring dip appears toward year-end.  
-   *Action:* Investigate seasonality, inventory, pricing and marketing cadence for Q4.
-
-These insights are translated into prioritized recommendations in the dashboard and supporting documentation.
-
----
-
-## 📝 Power BI Dashboard — What’s Included
-
-- Executive KPI cards (Revenue, Orders, AOV, YoY)
-- Time-series sales trend with drill-downs
-- Country & region revenue breakdown
-- Customer demographics (age, gender)
-- Category & subcategory performance (bikes, accessories, clothing)
-- Top customers & retention indicators
-- Insight boxes with recommended business actions
-
-> Tip: Add `assets/twowheels_dashboard.png` (or `Data visualisation/Power BI Report.png`) to the repo and reference it in README for quick preview.
-
----
-
-## ✅ How to Run / Recreate Locally
-
-> Assumes SQL Server & Power BI Desktop are installed.
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
-````
-
-2. Prepare the database:
-
-   * Open `scripts/init_database.sql` and run it against a SQL Server instance to create DB + schemas.
-3. Load Bronze (raw) data:
-
-   * Run bronze load procedures in `scripts/bronze/` to import CSVs.
-4. Execute Silver transformations:
-
-   * Run scripts in `scripts/silver/` to clean and standardize data.
-5. Build Gold model:
-
-   * Run `scripts/gold/ddl_gold.sql` to create fact & dimension tables.
-6. Run quality checks:
-
-   * Execute SQL in `tests/` to validate data integrity.
-7. Open Power BI:
-
-   * Connect to the Gold schema and load the `.pbix` (if included) or replicate visuals using the provided measures (DAX) and visuals.
-
----
-
-## 💡 Recommendations & Roadmap
-
-**Short-term / High impact**
-
-* Introduce accessories & clothing bundles (AOV lift)
-* Launch targeted female-focused campaigns (new segment growth)
-
-**Mid-term**
-
-* Expand to EU markets (Germany, France) with pilot campaigns
-* Implement RFM & CLV scoring in Gold layer for targeted marketing
-
-**Long-term**
-
-* Automate ETL with Airflow / Azure Data Factory
-* Move to a cloud lakehouse (Databricks / Azure Synapse) for scalability
-* CI/CD for database & report deployment
-
----
-
-## 📂 Contributing
-
-Contributions are welcome. Suggested contribution workflow:
-
-1. Fork the repository
-2. Create a feature branch (`feature/describe-change`)
-3. Add/modify scripts, docs or visuals
-4. Run tests & validate SQL quality checks
-5. Open a Pull Request with a clear description of changes
-
-Please follow the naming conventions in `docs/naming_conventions.md`.
-
----
-
-## 🧾 License
-
-This project is open-source under the **MIT License**. See `LICENSE` for details.
-
----
-
-## ✉️ Contact & Author Notes
-
-If you’d like help converting these insights into a **case study**, **portfolio slide deck**, or **PDF**, I can generate any of those assets.
-For direct collaboration or questions, open an Issue or reach out via the repository owner profile.
-
----
-
-### 🎯 Final Note for Recruiters / Reviewers
-
-This repository is intentionally built as a portfolio-grade demonstration showing both **technical data engineering skills** and **business impact thinking** — the combination recruiters look for in analytics and data engineering roles.
-
+├── README.md                           # Project overview and instructions
+├── LICENSE                             # License information for the repository
 ```
-
+---
 ---
 
-If you want, I can now:
-- Inject the actual Power BI `.pbix` linking instructions, OR
-- Generate an `Insights_Report.md` (detailed narrative copy for recruiters), OR
-- Produce a short **portfolio slide deck** (PDF) using the insights above.
+## 🛡️ License
 
-Which would you like next?
-```
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
