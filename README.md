@@ -166,7 +166,7 @@ This project demonstrates how combining data warehousing, analytics, and machine
 ## 📎 Links
 
 - **GitHub Repository**: [https://github.com/the-noble-analyst/Customer-Churn-Analytics](#)
-- **Power BI Dashboard**: [[Add link or screenshots](https://github.com/the-noble-analyst/Customer-Churn-Analytics/blob/main/PowerBI_Dashboard/)](#)
+- **Power BI Dashboard**: [https://github.com/the-noble-analyst/Customer-Churn-Analytics/blob/main/PowerBI_Dashboard/](https://github.com/the-noble-analyst/Customer-Churn-Analytics/blob/main/PowerBI_Dashboard/Power%20Bi%20Report.png](#)
 
 ---
 
