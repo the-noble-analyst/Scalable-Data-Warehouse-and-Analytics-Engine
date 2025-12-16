@@ -22,7 +22,9 @@ This project follows a full analytics pipeline:
 
 ### SQL Data Warehouse (Medallion Architecture)
 Bronze: Raw sales and customer data
+
 Silver: Cleaned and standardized tables
+
 Gold: Analytics-ready customer behavior tables
 
 ### SQL Exploratory Analysis
